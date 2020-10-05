@@ -19,7 +19,13 @@ If you are logged in as the test user, go to `/article` and you should see the l
 
 <img class="screenshot" alt="web list" src="/docs/assets/img/web-list.png">
 
-If not, update the `.html` template files under ```library_management/doctype/article/templates/``` with respective fields as per requirement
+If not, update the `.html` template files under ```library_management/doctype/article/templates/``` with respective fields as per requirement.
+
+**NOTE:** To enable Web Views for a DocType you must have `Has Web View` checked when you create the DocType. In the Route field below add `/article`.
+<img class="screenshot" alt="has web view" src="/docs/assets/img/has-web-view.png">
+Also add another field for the DocType with Label as Route, Type as Data, and Name as route.
+<img class="screenshot" alt="route field for web view" src="/docs/assets/img/route-field-for-web-view.png">
+
 
 Click on one article and you will see the default web view
 

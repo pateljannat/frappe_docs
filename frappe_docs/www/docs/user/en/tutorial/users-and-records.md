@@ -11,9 +11,9 @@ To make records, we will first create a User. To create a user, go to:
 
 Create a new User and set the email and first name. Then, click on edit in full page, go to **CHANGE PASSWORD** section and set a new password.
 
-After the user is created, click on the user in the list view and go to **ROLES** section. Here, give the Librarian and Library Member Roles to this user
+After the user is created, click on the user in the list view and go to **ROLES** section. Here, give the Librarian, Library Member and System Manager Roles to this user
 
-<img class="screenshot" alt="Add User Roles" src="/docs/assets/img/add_user_roles.png">
+<img class="screenshot" alt="Add User Roles" src="/docs/assets/img/user-permissions.png">
 
 Now logout and login using the new user id and password.
 

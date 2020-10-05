@@ -41,7 +41,8 @@ Here we can point to a Python function and that function will be executed every 
 	from __future__ import unicode_literals
 	import frappe
 	from frappe.utils import date_diff, nowdate, format_date, add_days
-
+	from six import iteritems
+	
 	def every_ten_minutes():
 		# stuff to do every 10 minutes
 		pass
@@ -56,7 +57,7 @@ Here we can point to a Python function and that function will be executed every 
 
 		overdue = get_overdue(loan_period)
 
-		for member, items in overdue.iteritems():
+		for members, items in iteritems(overdue):
 			content = """<h2>Following Items are Overdue</h2>
 			<p>Please return them as soon as possible</p><ol>"""
 
@@ -102,6 +103,10 @@ Note:
 1. We get the loan period from **Library Management Settings** by using `frappe.db.get_value`.
 1. We run a query in the database with `frappe.db.sql`
 1. Email is sent via `frappe.sendmail`
+
+Enable the scheduler for the site by using `bench --site [site-name] enable-scheduler`.
+
+**NOTE:** You may not be able to see the result of the job mentioned above as emails don't trigger on local environment. You can add a print statement in your function to verify if the funciton gets called though.
 
 ### Dormancy
 
